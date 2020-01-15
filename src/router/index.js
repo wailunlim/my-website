@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import About from "@/views/About.vue";
+import About from "../views/About.vue";
+import BlogHome from "../views/BlogHome.vue";
+import BlogPost from "../views/BlogPost.vue";
 
 Vue.use(VueRouter);
 
@@ -20,6 +22,16 @@ const routes = [
       import(
         /* webpackChunkName: "curriculum-vitae" */ "../views/CurriculumVitae.vue"
       )
+  },
+  {
+    path: "/blog",
+    name: "blog-home",
+    component: BlogHome
+  },
+  {
+    path: "/blog/:slug",
+    name: "blog-post",
+    component: BlogPost
   }
 ];
 
