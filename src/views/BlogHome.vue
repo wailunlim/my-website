@@ -1,8 +1,8 @@
 <template>
-  <div class="blog-home container my-5">
+  <div class="container my-5">
     <div v-for="{ slug, title, summary } in posts" :key="slug">
       <article class="row">
-        <router-link :to="'/blog/' + slug" class="col-md-4"
+        <router-link :to="'/blog-posts/' + slug" class="col-md-4"
           ><h2 class="text-info">{{ title }}</h2></router-link
         >
         <p class="col-md-8">

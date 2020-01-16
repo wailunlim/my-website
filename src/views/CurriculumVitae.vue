@@ -1,5 +1,5 @@
 <template>
-  <div class="about my-5 container">
+  <div class="my-5 container">
     <h1>Curriculum Vitae</h1>
     <Education />
     <WorkExperience />

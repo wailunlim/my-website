@@ -1,22 +1,36 @@
+<template>
+  <div class="container my-5">
+    <!-- only render if post is in -->
+    <div v-if="Object.keys(post).length">
+      <h1>{{ post.data.title }}</h1>
+      <div v-html="post.data.body"></div>
+    </div>
+    <nav>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" @click="$router.go(-1)">Go back</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
 <script>
-import { butter } from "@/buttercms";
+import { butter } from "../buttercms.js";
 export default {
   name: "blog-post",
   data() {
     return {
-      post: {}
+      post: {},
+      meta: null
     };
   },
   methods: {
     getPost() {
-      butter.post
-        .retrieve(this.$route.params.slug)
-        .then(res => {
-          this.post = res.data;
-        })
-        .catch(res => {
-          console.log(res);
-        });
+      butter.post.retrieve(this.$route.params.slug).then(res => {
+        console.log(res.data);
+        this.post = res.data;
+      });
     }
   },
   created() {
@@ -25,25 +39,8 @@ export default {
 };
 </script>
 
-<template>
-  <div id="blog-post">
-    <h1>{{ post.data.title }}</h1>
-    <h4>{{ post.data.author.first_name }} {{ post.data.author.last_name }}</h4>
-    <div v-html="post.data.body"></div>
-
-    <router-link
-      v-if="post.meta.previous_post"
-      :to="/blog/ + post.meta.previous_post.slug"
-      class="button"
-    >
-      {{ post.meta.previous_post.title }}
-    </router-link>
-    <router-link
-      v-if="post.meta.next_post"
-      :to="/blog/ + post.meta.next_post.slug"
-      class="button"
-    >
-      {{ post.meta.next_post.title }}
-    </router-link>
-  </div>
-</template>
+<style scoped>
+h1 {
+  font-size: 4em;
+}
+</style>
