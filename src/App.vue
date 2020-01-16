@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <NavBar />
-    <router-view :key="$route.fullPath" />
+    <transition name="fade" mode="out-in">
+      <router-view :key="$route.fullPath" />
+    </transition>
   </div>
 </template>
 
@@ -35,5 +37,18 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: all 0.3s;
 }
 </style>
