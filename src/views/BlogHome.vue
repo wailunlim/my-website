@@ -1,21 +1,49 @@
 <template>
-  <div id="blog-home">
-    <h1>{{ page_title }}</h1>
-    <!-- Create `v-for` and apply a `key` for Vue. Here we are using a combination of the slug and index. -->
-    <div v-for="(post, index) in posts" :key="post.slug + '_' + index">
-      <router-link :to="'/blog/' + post.slug">
-        <article class="media">
-          <figure>
-            <!-- Bind results using a `:` -->
-            <!-- Use a `v-if`/`else` if there is a `featured_image` -->
-            <img v-if="post.featured_image" :src="post.featured_image" alt="" />
-            <img v-else src="http://via.placeholder.com/250x250" alt="" />
-          </figure>
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.summary }}</p>
-        </article>
-      </router-link>
+  <div class="blog-home container my-5">
+    <div v-for="{ slug, title, summary } in posts" :key="slug">
+      <article class="row">
+        <router-link :to="'/blog/' + slug" class="col-md-4"
+          ><h2 class="text-info">{{ title }}</h2></router-link
+        >
+        <p class="col-md-8">
+          <small>{{ summary }}</small>
+        </p>
+      </article>
+      <hr />
     </div>
+    <!-- pagination -->
+    <nav>
+      <ul class="pagination justify-content-center">
+        <li class="page-item" :class="{ 'cursor-disallow': !previousPage }">
+          <a
+            class="page-link"
+            @click="
+              !previousPage
+                ? false
+                : $router.push({
+                    name: 'blog-page-view',
+                    query: { page: previousPage }
+                  })
+            "
+            >Previous</a
+          >
+        </li>
+        <li class="page-item" :class="{ 'cursor-disallow': !nextPage }">
+          <a
+            class="page-link"
+            @click="
+              !nextPage
+                ? false
+                : $router.push({
+                    name: 'blog-page-view',
+                    query: { page: nextPage }
+                  })
+            "
+            >Next</a
+          >
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -26,20 +54,31 @@ export default {
   name: "BlogHome",
   data() {
     return {
-      page_title: "Blog",
-      posts: []
+      posts: [],
+      meta: null
     };
   },
   methods: {
     getPosts() {
       butter.post
         .list({
-          page: 1,
-          page_size: 10
+          page: this.$route.query.page || 1,
+          page_size: 2
         })
         .then(res => {
           this.posts = res.data.data;
+          this.meta = res.data.meta;
         });
+    }
+  },
+  computed: {
+    previousPage() {
+      if (!this.meta) return null;
+      return this.meta.previous_page;
+    },
+    nextPage() {
+      if (!this.meta) return null;
+      return this.meta.next_page;
     }
   },
   created() {
@@ -48,4 +87,26 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+article {
+  margin: 2.5%;
+}
+
+article a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+h2 {
+  text-align: left;
+}
+
+.page-item {
+  cursor: pointer;
+}
+
+.cursor-disallow {
+  cursor: not-allowed;
+}
+</style>

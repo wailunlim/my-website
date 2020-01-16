@@ -24,12 +24,12 @@ const routes = [
       )
   },
   {
-    path: "/blog",
-    name: "blog-home",
+    path: "/blog-posts",
+    name: "blog-page-view",
     component: BlogHome
   },
   {
-    path: "/blog/:slug",
+    path: "/blog-posts/:slug",
     name: "blog-post",
     component: BlogPost
   }

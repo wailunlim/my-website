@@ -8,7 +8,7 @@
           <b-nav-item to="/curriculum-vitae" class="mx-xl-3"
             >Curriculum vitae</b-nav-item
           >
-          <b-nav-item to="/blog" class="mx-xl-3">Blog</b-nav-item>
+          <b-nav-item to="/blog-posts" class="mx-xl-3">Blog</b-nav-item>
           <b-nav-item to="" class="mx-xl-3" disabled>Fun stuffs</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
