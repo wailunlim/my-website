@@ -63,7 +63,7 @@ export default {
       butter.post
         .list({
           page: this.$route.query.page || 1,
-          page_size: 2
+          page_size: 5
         })
         .then(res => {
           this.posts = res.data.data;
