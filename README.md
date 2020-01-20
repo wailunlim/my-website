@@ -1,4 +1,4 @@
-# my-webapp
+# my-website
 
 ## Project setup
 ```
