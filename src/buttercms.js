@@ -1,2 +1,2 @@
 import Butter from "buttercms";
-export const butter = Butter("b9abddfbb7d019019271e4356e393abd19f0aa2e");
+export const butter = Butter(process.env.VUE_APP_BUTTER_API_TOKEN);
