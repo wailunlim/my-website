@@ -28,7 +28,6 @@ export default {
   methods: {
     getPost() {
       butter.post.retrieve(this.$route.params.slug).then(res => {
-        console.log(res.data);
         this.post = res.data;
       });
     }
