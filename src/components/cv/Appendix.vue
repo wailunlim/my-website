@@ -146,6 +146,11 @@
         </tr>
         <tr class="d-flex">
           <th class="col-4" />
+          <th class="col-6">Internship ####</th>
+          <th class="col-2">CS</th>
+        </tr>
+        <tr class="d-flex">
+          <th class="col-4" />
           <th class="col-6">Cyber Security</th>
           <th class="col-2">A</th>
         </tr>
@@ -194,6 +199,8 @@
       ### Extra modular credit given on top of the host module (Programming
       Methodology) for acquiring more in-depth understanding of the research
       issues pertaining to the subject matter.
+      <br />
+      #### Credit bearing internship at Vouch SG Pte Ltd
       <br />
       ===============<br />
       NUS Grading Scale:<br />

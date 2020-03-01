@@ -4,6 +4,22 @@
       <h2>Projects</h2>
     </div>
     <div class="row mb-3">
+      <div class="col-3">Jan 2020</div>
+      <div class="col-7">
+        <b>SamurAI</b> <br />
+        <ul>
+          <li>
+            Developed in 24 hours a web game where two teams compete to name the
+            top intepretations of images by an Artificial Intelligence
+          </li>
+          <li>
+            Built using Vue.js, Node.js and Microsoft Azure Computer Vision
+          </li>
+        </ul>
+      </div>
+      <div class="col-2">Team of 4</div>
+    </div>
+    <div class="row mb-3">
       <div class="col-3">Mar 2019 - Apr 2019</div>
       <div class="col-7">
         <b>Tetris clone</b> <br />
@@ -12,7 +28,7 @@
             Implemented a classic Tetris clone that is playable in a web browser
           </li>
           <li>
-            Written entirely in a pure functional programming language (Elm)
+            Written in a pure functional programming language (Elm)
           </li>
         </ul>
       </div>

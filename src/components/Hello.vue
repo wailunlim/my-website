@@ -9,13 +9,14 @@
     </h3>
     <br />
     <h3>
-      I will soon be in <i>Munich, Germany</i> till end July for an internship
-      as a software developer. There I hope to learn more about businesses on
-      top of improving my technical skills. I also hope to improve my German and
+      I am currently in <i>Munich, Germany</i> for an internship with Agrando as
+      a frontend developer. There I hope to learn more about businesses on top
+      of improving my technical skills. I also hope to improve my German and
       find time to travel around Europe.
     </h3>
     <br />
     <h3>
+      My main interests are in programming languages and software engineering.
       Outside of programming I enjoy video games, TV shows and movies. I also
       play football and go for the occasional swim to keep fit.
     </h3>

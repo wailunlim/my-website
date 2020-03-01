@@ -8,7 +8,7 @@
         <b>Programming</b>
       </div>
       <div class="col-6">
-        <div class="row mb-1">JavaScript (Node.js)</div>
+        <div class="row mb-1">JavaScript</div>
         <div class="row mb-1">Java</div>
         <div class="row mb-1">Python</div>
         <div class="row mb-1">Haskell</div>
@@ -31,14 +31,12 @@
       <div class="col-6">
         <div class="row mb-1">HTML/CSS</div>
         <div class="row mb-1">Vue.js</div>
-        <div class="row mb-1">React</div>
         <div class="row mb-1">Elm</div>
         <div class="row mb-1">Ruby on Rails</div>
       </div>
       <div class="col-2">
         <div class="row mb-1">Proficient</div>
         <div class="row mb-1">Proficient</div>
-        <div class="row mb-1">Intermediate</div>
         <div class="row mb-1">Intermediate</div>
         <div class="row mb-1">Basic</div>
       </div>
