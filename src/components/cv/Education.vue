@@ -13,7 +13,7 @@
       <div class="col-2">Singapore</div>
     </div>
     <div class="row mb-3">
-      <div class="col-3">Aug 2017 - Present</div>
+      <div class="col-3">Feb 2013 - Nov 2014</div>
       <div class="col-7">
         <b>Anglo-Chinese Junior College</b> <br />
         Singapore-Cambridge General Certificate of Education Advanced Level

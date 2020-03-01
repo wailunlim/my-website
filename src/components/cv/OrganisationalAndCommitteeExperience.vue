@@ -26,7 +26,7 @@
       <div class="col-2">Singapore</div>
     </div>
     <div class="row mb-3">
-      <div class="col-3">May 2018 - Aug 2018</div>
+      <div class="col-3">Sep 2017 – Jun 2018</div>
       <div class="col-7">
         <b>Freshmen Orientation Projects</b> <br />
         Vice Project Director (Administrative), Freshmen Social Camp
