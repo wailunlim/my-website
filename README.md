@@ -1,5 +1,9 @@
 # my-website
 
+This repo contains the source code for the website at https://wailunlim.github.io/.
+
+It's *still* under development and requires updating!
+
 ## Project setup
 ```
 yarn install
@@ -22,3 +26,9 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Deployment
+```
+sh deploy.sh
+```
