@@ -15,7 +15,7 @@
           </li>
         </ul>
       </div>
-      <div class="col-2">Singapore</div>
+      <div class="col-2">Munich, Germany</div>
     </div>
     <div class="row mb-3">
       <div class="col-3">May 2019 - Aug 2019</div>
